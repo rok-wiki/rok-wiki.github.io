@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1차 KVK 티어 리스트 - 라오킹 위키</title>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
+        /* 무채색 배경 및 폰트 설정 (image_248817 참고) */
+        body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         .container { max-width: 1000px; width: 100%; text-align: center; }
-        h1 { color: #ff4d4d; margin-bottom: 30px; }
 
-        /* 탭 스타일 */
+        /* 최상단 HOME 버튼 (image_248817 스타일) */
+        .top-nav { margin-bottom: 40px; }
+        .home-link { color: #adb5bd; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .home-link:hover { color: #ffffff; }
+
+        /* 제목 스타일 (강조색 제거) */
+        h1 { color: #ffffff; font-size: 2.5rem; margin-bottom: 30px; }
+
+        /* 스몰 탭 스타일 (image_2f6a39 스타일) */
         .tabs { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
         .tab { color: #adb5bd; cursor: pointer; font-size: 1.1rem; padding: 5px 10px; transition: 0.3s; }
         .tab:hover { color: #ffffff; }
-        .tab.active { color: #ff4d4d; font-weight: bold; border-bottom: 2px solid #ff4d4d; }
+        /* 활성 탭 강조 (색상 대신 흰색과 굵은 선 사용) */
+        .tab.active { color: #ffffff; font-weight: bold; border-bottom: 2px solid #ffffff; }
 
         /* 콘텐츠 영역 */
         .tier-content { display: none; }
@@ -23,20 +32,24 @@
 
         /* P.S. 섹션 */
         .ps-section { text-align: left; margin-top: 20px; }
-        .ps-title { color: #ff4d4d; font-weight: bold; font-size: 0.9rem; margin-bottom: 8px; display: block; }
-        .ps-box { background-color: #1c2128; border-left: 4px solid #30363d; padding: 15px; border-radius: 4px; }
+        .ps-title { color: #ffffff; font-weight: bold; font-size: 0.9rem; margin-bottom: 8px; display: block; }
+        .ps-box { background-color: #1c2128; border-left: 4px solid #ffffff; padding: 15px; border-radius: 4px; }
         .ps-text { color: #adb5bd; font-size: 0.9rem; font-style: italic; margin: 0; line-height: 1.6; }
 
-        /* 하단 링크 버튼 */
-        .link-container { margin-top: 50px; display: flex; gap: 20px; padding-bottom: 30px; justify-content: center; }
+        /* 하단 돌아가기 버튼 */
+        .bottom-nav { margin-top: 50px; padding-bottom: 30px; }
         .back-link { color: #adb5bd; text-decoration: none; font-size: 0.9rem; }
-        .back-link:hover { color: #ff4d4d; }
+        .back-link:hover { color: #ffffff; }
     </style>
 </head>
 <body>
 
+    <nav class="top-nav">
+        <a href="index.html" class="home-link">Home</a>
+    </nav>
+
     <div class="container">
-        <h1>⚔️ 1차 KVK 사령관 티어표</h1>
+        <h1>사령관 1차 KVK 조합</h1>
 
         <div class="tabs">
             <div class="tab active" onclick="showTier('field')">Field</div>
@@ -48,29 +61,26 @@
                 <img src="https://github.com/rok-wiki/rok-wiki.github.io/blob/main/my-image.png?raw=true" class="tier-image">
             </div>
             <div class="ps-section">
-                <span class="ps-title">P.S.</span>
+                <span class="ps-title">P.S. (필드전 가이드)</span>
                 <div class="ps-box">
-                    <p class="ps-text">-이성계를 각성할 황뚝을 꼭 모으세요 정복에서도 쓰는 1티어입니다.</p>
-                    <p class="ps-text">-2티어에 있는 전설 사령관에는 황뚝을 사용하지 마세요.</p>
+                    <p class="ps-text">필드전 관련 주의사항을 적으세요.</p>
                 </div>
             </div>
         </div>
 
         <div id="rally" class="tier-content">
             <div class="tier-image-box">
-                <img src="https://github.com/rok-wiki/rok-wiki.github.io/blob/main/my-image%20(1).png?raw=true" class="tier-image">
+                <img src="집결수성_이미지_주소?raw=true" class="tier-image">
             </div>
             <div class="ps-section">
-                <span class="ps-title">P.S.</span>
+                <span class="ps-title">P.S. (집결/수성 가이드)</span>
                 <div class="ps-box">
-                    <p class="ps-text">-집결 1티어 조합은 투트모세 or 피로스/이성계 입니다.</p>
-                    <p class="ps-text">-수성 2티어 조합은 마르텔/손무 or 피로스 입니다.</p>
+                    <p class="ps-text">집결 및 수성 관련 주의사항을 적으세요.</p>
                 </div>
             </div>
         </div>
 
-        <div class="link-container">
-            <a href="index.html" class="back-link">← HOME</a>
+        <div class="bottom-nav">
             <a href="commander.html" class="back-link">← 시즌 선택으로 돌아가기</a>
         </div>
     </div>

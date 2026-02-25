@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>ROK WIKI</title>
+    <style>
+        /* 기본 스타일 */
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f6f6f6; }
+        
+        /* 메뉴 바 스타일 */
+        .navbar { background-color: #202124; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        .navbar a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        .navbar a:hover { text-decoration: underline; }
+        .logo { font-weight: bold; font-size: 1.2rem; }
+
+        /* 본문 상자 스타일 */
+        .container { max-width: 900px; margin: 30px auto; background: white; border: 1px solid #a2a9b1; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 1px solid #a2a9b1; padding-bottom: 10px; margin-top: 0; }
+        .wiki-notice { background: #f8f9fa; border: 1px solid #eaecf0; padding: 10px; margin-bottom: 20px; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <h1>🇰🇷 ROK WIKI 에 오신 것을 환영합니다</h1>
-    <hr>
-    <p>GitHub Pages를 이용한 첫 번째 위키 페이지입니다.</p>
+
+    <div class="navbar">
+        <div class="logo">🇰🇷 ROK WIKI</div>
+        <div class="links">
+            <a href="index.html">홈</a>
+            <a href="#">역사</a>
+            <a href="#">문화</a>
+            <a href="#">최근 변경</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="wiki-notice">이 문서는 프로젝트의 메인 페이지입니다.</div>
+        <h1>대한민국 위키에 오신 것을 환영합니다</h1>
+        <p>GitHub Pages를 통해 운영되는 <b>ROK WIKI</b>입니다. 이곳에서 다양한 정보를 자유롭게 확인하세요.</p>
+        
+        ### 주요 항목
+        <ul>
+            <li>대한민국의 역사</li>
+            <li>대한민국의 문화와 예술</li>
+            <li>주요 도시 정보</li>
+        </ul>
+    </div>
+
 </body>
 </html>

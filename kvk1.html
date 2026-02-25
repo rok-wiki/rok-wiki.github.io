@@ -7,27 +7,20 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
         .container { max-width: 1000px; width: 100%; text-align: center; }
-        h1 { color: #ff4d4d; margin-bottom: 30px; }
+        h1 { color: #ff4d4d; margin-bottom: 40px; }
         
-        /* 이미지 스타일 */
+        .section-title { color: #fcc419; font-size: 1.5rem; margin-top: 50px; margin-bottom: 20px; border-left: 5px solid #ff4d4d; padding-left: 15px; text-align: left; }
+        
         .tier-image-container { 
             background-color: #161b22; 
-            padding: 20px; 
+            padding: 15px; 
             border-radius: 12px; 
             border: 1px solid #30363d;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
-        .tier-image { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 8px;
-        }
+        .tier-image { max-width: 100%; height: auto; border-radius: 8px; }
 
-        /* 설명글 스타일 */
-        .description { text-align: left; background-color: #1c2128; padding: 20px; border-radius: 12px; line-height: 1.6; }
-        .description h2 { color: #fcc419; font-size: 1.2rem; }
-        
-        .back-link { margin-top: 40px; display: inline-block; color: #adb5bd; text-decoration: none; }
+        .back-link { margin-top: 50px; display: inline-block; color: #adb5bd; text-decoration: none; padding-bottom: 30px; }
         .back-link:hover { color: #ff4d4d; }
     </style>
 </head>
@@ -36,14 +29,14 @@
     <div class="container">
         <h1>⚔️ 1차 KVK 사령관 티어표</h1>
 
+        <h2 class="section-title">주요 필드 쟁용 (Field)</h2>
         <div class="tier-image-container">
-            <img src="https://github.com/rok-wiki/rok-wiki.github.io/blob/main/my-image.png?raw=true" alt="1차 KVK 티어리스트" class="tier-image">
+            <img src="https://github.com/아이디/저장소/blob/main/field-tier.png?raw=true" alt="필드 티어리스트" class="tier-image">
         </div>
 
-        <div class="description">
-            <h2>💡 시즌 요약 및 팁</h2>
-            <p>- 1차 KVK는 미나모토와 이성계의 비중이 매우 높습니다.</p>
-            <p>- 보병 유저는 리처드 육성 여부에 따라 필드전 기여도가 달라집니다.</p>
+        <h2 class="section-title">집결 및 수성용 (Rally & Garrison)</h2>
+        <div class="tier-image-container">
+            <img src="https://github.com/아이디/저장소/blob/main/rally-tier.png?raw=true" alt="집결&수성 티어리스트" class="tier-image">
         </div>
 
         <a href="commander.html" class="back-link">← 시즌 선택으로 돌아가기</a>

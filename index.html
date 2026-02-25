@@ -2,46 +2,136 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>ROK WIKI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROK WIKI Hub</title>
     <style>
-        /* 기본 스타일 */
-        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f6f6f6; }
-        
-        /* 메뉴 바 스타일 */
-        .navbar { background-color: #202124; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
-        .navbar a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
-        .navbar a:hover { text-decoration: underline; }
-        .logo { font-weight: bold; font-size: 1.2rem; }
+        /* 기본 배경 및 폰트 설정 */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0b0e14; 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        /* 본문 상자 스타일 */
-        .container { max-width: 900px; margin: 30px auto; background: white; border: 1px solid #a2a9b1; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1 { border-bottom: 1px solid #a2a9b1; padding-bottom: 10px; margin-top: 0; }
-        .wiki-notice { background: #f8f9fa; border: 1px solid #eaecf0; padding: 10px; margin-bottom: 20px; font-size: 0.9rem; }
+        /* 상단 네비게이션 바 */
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+            background: rgba(11, 14, 20, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .navbar a:hover { color: #fcc419; }
+
+        /* 헤더 섹션 */
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+        .header h1 span { color: #fcc419; }
+        .header p {
+            color: #adb5bd;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        /* 카드 그리드 레이아웃 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding-bottom: 100px;
+        }
+
+        /* 카드 스타일 */
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #fcc419;
+            background-color: #1c2128;
+        }
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+        }
+        .card p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <div class="logo">🇰🇷 ROK WIKI</div>
-        <div class="links">
-            <a href="index.html">홈</a>
-            <a href="#">역사</a>
-            <a href="#">문화</a>
-            <a href="#">최근 변경</a>
-        </div>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">History</a>
+        <a href="#">Research</a>
+        <a href="#">Wiki</a>
+    </nav>
+
+    <div class="header">
+        <h1>Rise of Korea <span>Hub</span></h1>
+        <p>대한민국의 모든 정보를 한눈에 최적화된 환경에서 확인하세요.</p>
     </div>
 
-    <div class="container">
-        <div class="wiki-notice">이 문서는 프로젝트의 메인 페이지입니다.</div>
-        <h1>대한민국 위키에 오신 것을 환영합니다</h1>
-        <p>GitHub Pages를 통해 운영되는 <b>ROK WIKI</b>입니다. 이곳에서 다양한 정보를 자유롭게 확인하세요.</p>
-        
-        ### 주요 항목
-        <ul>
-            <li>대한민국의 역사</li>
-            <li>대한민국의 문화와 예술</li>
-            <li>주요 도시 정보</li>
-        </ul>
+    <div class="grid-container">
+        <div class="card">
+            <div class="card-icon">⚔️</div>
+            <h3>역사 가이드</h3>
+            <p>고조선부터 현대까지, 대한민국의 역사를 시대별로 정리했습니다.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏛️</div>
+            <h3>문화 유산</h3>
+            <p>유네스코 지정 유산과 대한민국의 아름다운 전통 문화를 소개합니다.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏙️</div>
+            <h3>주요 도시</h3>
+            <p>서울, 부산, 인천 등 각 도시의 특징과 실시간 정보를 제공합니다.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>통계 데이터</h3>
+            <p>인구, 경제, 산업 등 대한민국의 주요 지표를 시각화하여 보여줍니다.</p>
+        </div>
     </div>
 
 </body>

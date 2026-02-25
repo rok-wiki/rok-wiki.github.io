@@ -2,24 +2,71 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사령관 조합 - 라오킹 위키</title>
     <style>
-        body { background-color: #0b0e14; color: white; font-family: sans-serif; padding: 50px; line-height: 1.6; }
-        .content { max-width: 800px; margin: 0 auto; background: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d; }
-        h1 { color: #fcc419; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        .back-btn { display: inline-block; margin-top: 20px; color: #adb5bd; text-decoration: none; }
-        .back-btn:hover { color: #fcc419; }
+        /* 기존 메인 페이지의 디자인 스타일 유지 */
+        body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        .navbar { width: 100%; display: flex; justify-content: center; padding: 20px 0; background: rgba(11, 14, 20, 0.8); position: sticky; top: 0; }
+        .navbar a { color: #adb5bd; text-decoration: none; margin: 0 15px; }
+        .header { text-align: center; padding: 60px 20px; }
+        .header h1 { font-size: 2.5rem; color: #ffffff; }
+        .header h1 span { color: #fcc419; }
+
+        /* 카드 그리드 설정 */
+        .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; transition: 0.3s; cursor: pointer; text-align: center; }
+        .card:hover { transform: translateY(-5px); border-color: #fcc419; }
+        .card-icon { font-size: 2rem; margin-bottom: 15px; }
+        .back-link { margin-top: 50px; color: #adb5bd; text-decoration: none; }
+        .back-link:hover { color: #fcc419; }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>⚔️ 사령관 조합 가이드</h1>
-        <p>1차 KvK부터 정복 KvK까지의 메타 사령관 정보를 정리하는 공간입니다.</p>
-        <ul>
-            <li><b>보병 조합:</b> 알렉산더 + 이성계</li>
-            <li><b>기병 조합:</b> 미나모토 + 조조</li>
-        </ul>
-        <a href="index.html" class="back-btn">← 메인으로 돌아가기</a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="header">
+        <h1>사령관 <span>조합 가이드</span></h1>
+        <p>각 병종별 최강의 조합을 확인하세요.</p>
     </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>보병 조합</h3>
+            <p>보병 주력 사령관 추천</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🐎</div>
+            <h3>기병 조합</h3>
+            <p>기병 주력 사령관 추천</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏹</div>
+            <h3>궁병 조합</h3>
+            <p>궁병 주력 사령관 추천</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">👑</div>
+            <h3>혼성 조합</h3>
+            <p>다양한 병종 조합 추천</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link">← 메인 화면으로 돌아가기</a>
+
 </body>
 </html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사령관 조합 - 라오킹 위키</title>
     <style>
-        /* 기존 메인 페이지의 디자인 스타일 유지 */
         body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; display: flex; flex-direction: column; align-items: center; }
         .navbar { width: 100%; display: flex; justify-content: center; padding: 20px 0; background: rgba(11, 14, 20, 0.8); position: sticky; top: 0; }
         .navbar a { color: #adb5bd; text-decoration: none; margin: 0 15px; }
@@ -13,20 +12,42 @@
         .header h1 { font-size: 2.5rem; color: #ffffff; }
         .header h1 span { color: #fcc419; }
 
-        /* 카드 그리드 설정 */
-        .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    width: 95%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; transition: 0.3s; cursor: pointer; text-align: center; }
-        .card:hover { transform: translateY(-5px); border-color: #fcc419; }
-        .card-icon { font-size: 2rem; margin-bottom: 15px; }
-        .back-link { margin-top: 50px; color: #adb5bd; text-decoration: none; }
-        .back-link:hover { color: #fcc419; }
+        /* 카드 배열: 가로 3개 나란히 */
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 20px; 
+            width: 95%; 
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+
+        /* 카드 기본 스타일 */
+        .card { background-color: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 35px 20px; transition: 0.3s; cursor: pointer; text-align: center; text-decoration: none; color: inherit; display: block; }
+        .card-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+
+        /* 아이콘별 테마 색상 설정 */
+        /* 1차: 레드 테마 (전쟁) */
+        .kvk1 { border-bottom: 4px solid #ff4d4d !important; }
+        .kvk1:hover { border-color: #ff4d4d !important; background-color: #251616 !important; transform: translateY(-5px); }
+        .kvk1 h3 { color: #ff4d4d; }
+
+        /* 2차: 블루 테마 (방어/방패) */
+        .kvk2 { border-bottom: 4px solid #339af0 !important; }
+        .kvk2:hover { border-color: #339af0 !important; background-color: #161b25 !important; transform: translateY(-5px); }
+        .kvk2 h3 { color: #339af0; }
+
+        /* 정복: 골드 테마 (왕관) */
+        .conquest { border-bottom: 4px solid #fcc419 !important; }
+        .conquest:hover { border-color: #fcc419 !important; background-color: #262110 !important; transform: translateY(-5px); }
+        .conquest h3 { color: #fcc419; }
+
+        .back-link { margin-top: 50px; color: #adb5bd; text-decoration: none; padding-bottom: 50px; }
+
+        /* 모바일 대응 */
+        @media (max-width: 900px) {
+            .grid-container { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -36,34 +57,28 @@
     </nav>
 
     <div class="header">
-        <h1>사령관 <span>조합 가이드</span></h1>
-        <p>각 병종별 최강의 조합을 확인하세요.</p>
+        <h1>사령관 <span>시즌별 조합</span></h1>
+        <p>각 시즌의 아이콘 컬러에 맞춘 최적의 사령관 정보를 확인하세요.</p>
     </div>
 
     <div class="grid-container">
-        <div class="card">
-            <div class="card-icon">🛡️</div>
-            <h3>보병 조합</h3>
-            <p>보병 주력 사령관 추천</p>
-        </div>
+        <a href="kvk1.html" class="card kvk1">
+            <span class="card-icon">⚔️</span>
+            <h3>1차 KVK</h3>
+            <p>초반 전설 및 영웅 조합</p>
+        </a>
 
-        <div class="card">
-            <div class="card-icon">🐎</div>
-            <h3>기병 조합</h3>
-            <p>기병 주력 사령관 추천</p>
-        </div>
+        <a href="kvk2.html" class="card kvk2">
+            <span class="card-icon">🛡️</span>
+            <h3>2차 KVK</h3>
+            <p>신규 전설 사령관 투입</p>
+        </a>
 
-        <div class="card">
-            <div class="card-icon">🏹</div>
-            <h3>궁병 조합</h3>
-            <p>궁병 주력 사령관 추천</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">👑</div>
-            <h3>혼성 조합</h3>
-            <p>다양한 병종 조합 추천</p>
-        </div>
+        <a href="kvk3-conquest.html" class="card conquest">
+            <span class="card-icon">👑</span>
+            <h3>정복 시즌</h3>
+            <p>최종 메타 사령관 조합</p>
+        </a>
     </div>
 
     <a href="index.html" class="back-link">← 메인 화면으로 돌아가기</a>

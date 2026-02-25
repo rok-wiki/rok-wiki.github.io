@@ -6,31 +6,28 @@
     <title>1차 KVK 티어 리스트 - 라오킹 위키</title>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; }
-        .container { max-width: 900px; width: 100%; }
-        h1 { color: #ff4d4d; text-align: center; margin-bottom: 40px; }
-
-        /* 티어 행 스타일 */
-        .tier-row { display: flex; min-height: 100px; border: 1px solid #30363d; margin-bottom: 5px; background-color: #161b22; }
+        .container { max-width: 1000px; width: 100%; text-align: center; }
+        h1 { color: #ff4d4d; margin-bottom: 30px; }
         
-        /* 왼쪽 티어 라벨 */
-        .tier-label { width: 120px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #000; font-size: 1.2rem; text-align: center; padding: 10px; }
+        /* 이미지 스타일 */
+        .tier-image-container { 
+            background-color: #161b22; 
+            padding: 20px; 
+            border-radius: 12px; 
+            border: 1px solid #30363d;
+            margin-bottom: 30px;
+        }
+        .tier-image { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px;
+        }
+
+        /* 설명글 스타일 */
+        .description { text-align: left; background-color: #1c2128; padding: 20px; border-radius: 12px; line-height: 1.6; }
+        .description h2 { color: #fcc419; font-size: 1.2rem; }
         
-        /* 오른쪽 사령관 목록 영역 */
-        .tier-content { flex: 1; display: flex; align-items: center; padding: 10px 20px; flex-wrap: wrap; gap: 15px; }
-
-        /* 사령관 아이템 스타일 */
-        .commander-item { display: flex; flex-direction: column; align-items: center; text-align: center; width: 80px; }
-        .comm-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #30363d; margin-bottom: 5px; }
-        .comm-name { font-size: 0.8rem; color: #adb5bd; }
-
-        /* 티어별 색상 정의 (image_313719 참고) */
-        .t-s { background-color: #ff7f7f; } /* 1티어: 빨강 */
-        .t-a { background-color: #ffbf7f; } /* 2티어: 주황 */
-        .t-b { background-color: #ffff7f; } /* 3티어: 노랑 */
-        .t-c { background-color: #7fff7f; } /* 4티어: 초록 */
-        .t-f { background-color: #7f7fff; } /* 5티어: 파랑 */
-
-        .back-link { margin-top: 40px; color: #adb5bd; text-decoration: none; }
+        .back-link { margin-top: 40px; display: inline-block; color: #adb5bd; text-decoration: none; }
         .back-link:hover { color: #ff4d4d; }
     </style>
 </head>
@@ -39,42 +36,14 @@
     <div class="container">
         <h1>⚔️ 1차 KVK 사령관 티어표</h1>
 
-        <div class="tier-row">
-            <div class="tier-label t-s">1티어</div>
-            <div class="tier-content">
-                <div class="commander-item">
-                    <img src="https://github.com/rok-wiki/rok-wiki.github.io/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-02-25%20194359.png?raw=true" class="comm-img">
-                    <span class="comm-name">미나모토</span>
-                </div>
-                <div class="commander-item">
-                    <img src="https://github.com/rok-wiki/rok-wiki.github.io/blob/main/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202026-02-25%20194338.png?raw=true" class="comm-img">
-                    <span class="comm-name">이성계</span>
-                </div>
-            </div>
+        <div class="tier-image-container">
+            <img src="여기에_이미지_주소_붙여넣기" alt="1차 KVK 티어리스트" class="tier-image">
         </div>
 
-        <div class="tier-row">
-            <div class="tier-label t-a">2티어</div>
-            <div class="tier-content">
-                <div class="commander-item">
-                    <img src="" class="comm-img">
-                    <span class="comm-name">리처드</span>
-                </div>
-                <div class="commander-item">
-                    <img src="" class="comm-img">
-                    <span class="comm-name">마르텔</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="tier-row">
-            <div class="tier-label t-b">3티어</div>
-            <div class="tier-content">
-                <div class="commander-item">
-                    <img src="" class="comm-img">
-                    <span class="comm-name">조조</span>
-                </div>
-            </div>
+        <div class="description">
+            <h2>💡 시즌 요약 및 팁</h2>
+            <p>- 1차 KVK는 미나모토와 이성계의 비중이 매우 높습니다.</p>
+            <p>- 보병 유저는 리처드 육성 여부에 따라 필드전 기여도가 달라집니다.</p>
         </div>
 
         <a href="commander.html" class="back-link">← 시즌 선택으로 돌아가기</a>

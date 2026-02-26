@@ -96,13 +96,52 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+        .lang-menu { position: relative; display: inline-block; }
+    .selected-lang { background: #161b22; color: white; padding: 8px 15px; border: 1px solid #30363d; border-radius: 6px; cursor: pointer; }
+    .lang-menu ul { 
+    display: none; position: absolute; right: 0; background: #0d1117; 
+    border: 1px solid #30363d; border-radius: 8px; list-style: none; 
+    padding: 10px; min-width: 150px; z-index: 1000;
+}
+    .lang-menu:hover ul { display: block; }
+    .lang-menu ul li a { color: #adb5bd; text-decoration: none; display: block; padding: 8px; font-size: 0.9rem; }
+    .lang-menu ul li a:hover { background: #1f242c; color: white; border-radius: 4px; }
     </style>
 </head>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'ko',
+            includedLanguages: 'ko,en,zh-CN,ja,vi', // 드롭다운에 넣은 언어들
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    function changeLanguage(langCode) {
+        var selectField = document.querySelector("select.goog-te-combo");
+        if (selectField) {
+            selectField.value = langCode;
+            selectField.dispatchEvent(new Event('change'));
+        }
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <body>
 
     <nav class="navbar">
         <a href="#">Home</a>
     </nav>
+    <div class="lang-menu">
+    <button class="selected-lang">Language 🌐</button>
+    <ul>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('ko')">🇰🇷 Korean</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('en')">🇺🇸 English</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('zh-CN')">🇨🇳 Chinese</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('ja')">🇯🇵 Japanese</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('vi')">🇻🇳 Vietnamese</a></li>
+    </ul>
+</div>
+<div id="google_translate_element" style="display:none;"></div>
 
    <div class="header">
     <h1 style="color: #ffffff;">라오킹 <span>위키</span></h1>

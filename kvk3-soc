@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차 & 정복 시즌 티어 리스트 - 라오킹 위키</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #ffffff; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 1000px; width: 100%; text-align: center; }
+        .top-nav { margin-bottom: 40px; }
+        .home-link { color: #adb5bd; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .home-link:hover { color: #ffffff; }
+        h1 { color: #ffffff; font-size: 2.5rem; margin-bottom: 30px; }
+        .tabs { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
+        .tab { color: #adb5bd; cursor: pointer; font-size: 1.1rem; padding: 5px 10px; transition: 0.3s; }
+        .tab:hover { color: #ffffff; }
+        .tab.active { color: #ffffff; font-weight: bold; border-bottom: 2px solid #ffffff; }
+        .tier-content { display: none; }
+        .tier-content.active { display: block; }
+        .tier-image-box { background-color: #161b22; padding: 15px; border-radius: 12px; border: 1px solid #30363d; margin-bottom: 20px; }
+        .tier-image { max-width: 100%; height: auto; border-radius: 8px; }
+        .ps-section { text-align: left; margin-top: 20px; }
+        .ps-title { color: #ffffff; font-weight: bold; font-size: 0.9rem; margin-bottom: 8px; display: block; }
+        .ps-box { background-color: #1c2128; border-left: 4px solid #ffffff; padding: 15px; border-radius: 4px; }
+        .ps-text { color: #adb5bd; font-size: 0.9rem; font-style: italic; margin: 0; line-height: 1.6; }
+        .bottom-nav { margin-top: 50px; padding-bottom: 30px; }
+        .back-link { color: #adb5bd; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { color: #ffffff; }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="home-link">Home</a>
+    </nav>
+    <div class="container">
+        <h1>3차 & 정복 시즌 조합</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTier('field')">Field</div>
+            <div class="tab" onclick="showTier('rally')">Rally & Garrison</div>
+        </div>
+        <div id="field" class="tier-content active">
+            <div class="tier-image-box">
+                <img src="3차_정복_필드_이미지_주소?raw=true" class="tier-image">
+            </div>
+            <div class="ps-section">
+                <span class="ps-title">P.S. (3차/정복 필드전 가이드)</span>
+                <div class="ps-box"><p class="ps-text">정복 시즌 필드전 메모를 입력하세요.</p></div>
+            </div>
+        </div>
+        <div id="rally" class="tier-content">
+            <div class="tier-image-box">
+                <img src="3차_정복_집결수성_이미지_주소?raw=true" class="tier-image">
+            </div>
+            <div class="ps-section">
+                <span class="ps-title">P.S. (3차/정복 집결/수성 가이드)</span>
+                <div class="ps-box"><p class="ps-text">정복 시즌 집결/수성 메모를 입력하세요.</p></div>
+            </div>
+        </div>
+        <div class="bottom-nav">
+            <a href="commander.html" class="back-link">← 시즌 선택으로 돌아가기</a>
+        </div>
+    </div>
+    <script>
+        function showTier(tierId) {
+            document.querySelectorAll('.tier-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tierId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

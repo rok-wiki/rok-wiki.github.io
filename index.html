@@ -96,16 +96,72 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
-        .lang-menu { position: relative; display: inline-block; }
-    .selected-lang { background: #161b22; color: white; padding: 8px 15px; border: 1px solid #30363d; border-radius: 6px; cursor: pointer; }
-    .lang-menu ul { 
-    display: none; position: absolute; right: 0; background: #0d1117; 
-    border: 1px solid #30363d; border-radius: 8px; list-style: none; 
-    padding: 10px; min-width: 150px; z-index: 1000;
+        /* 언어 메뉴 컨테이너 */
+.lang-menu { 
+    position: relative; 
+    display: inline-block; 
 }
-    .lang-menu:hover ul { display: block; }
-    .lang-menu ul li a { color: #adb5bd; text-decoration: none; display: block; padding: 8px; font-size: 0.9rem; }
-    .lang-menu ul li a:hover { background: #1f242c; color: white; border-radius: 4px; }
+
+/* 언어 선택 버튼 */
+.selected-lang { 
+    background: #161b22; 
+    color: white; 
+    padding: 10px 18px; 
+    border: 1px solid #30363d; 
+    border-radius: 6px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 드롭다운 리스트 - 버튼과 딱 붙여서 끊김 방지 */
+.lang-menu ul { 
+    display: none; 
+    position: absolute; 
+    right: 0; 
+    top: 100%; /* 버튼 바로 아래 배치 */
+    margin: 0; /* 간격 제거로 마우스 이동 시 꺼짐 방지 */
+    background: #0d1117; 
+    border: 1px solid #30363d; 
+    border-radius: 8px; 
+    list-style: none; 
+    padding: 8px; 
+    min-width: 160px; 
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* 마우스가 메뉴 영역 안에 있으면 계속 표시 */
+.lang-menu:hover ul { 
+    display: block; 
+}
+
+/* 각 언어 항목 */
+.lang-menu ul li a { 
+    color: #adb5bd; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 10px; 
+    font-size: 0.9rem; 
+    transition: 0.2s;
+}
+
+.lang-menu ul li a:hover { 
+    background: #1f242c; 
+    color: white; 
+    border-radius: 4px; 
+}
+
+/* 국기 이미지 스타일 */
+.flag-img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+}
     </style>
 </head>
     <script type="text/javascript">
@@ -132,14 +188,17 @@
         <a href="#">Home</a>
     </nav>
     <div class="lang-menu">
-    <button class="selected-lang">Language 🌐</button>
+    <button class="selected-lang">
+        <img src="https://flagcdn.com/w20/kr.png" class="flag-img"> Language 🌐
+    </button>
     <ul>
-        <li><a href="javascript:void(0)" onclick="changeLanguage('ko')">🇰🇷 Korean</a></li>
-        <li><a href="javascript:void(0)" onclick="changeLanguage('en')">🇺🇸 English</a></li>
-        <li><a href="javascript:void(0)" onclick="changeLanguage('zh-CN')">🇨🇳 Chinese</a></li>
-        <li><a href="javascript:void(0)" onclick="changeLanguage('ja')">🇯🇵 Japanese</a></li>
-        <li><a href="javascript:void(0)" onclick="changeLanguage('vi')">🇻🇳 Vietnamese</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('ko')"><img src="https://flagcdn.com/w20/kr.png" class="flag-img"> Korean</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('en')"><img src="https://flagcdn.com/w20/us.png" class="flag-img"> English</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('zh-CN')"><img src="https://flagcdn.com/w20/cn.png" class="flag-img"> Chinese</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('ja')"><img src="https://flagcdn.com/w20/jp.png" class="flag-img"> Japanese</a></li>
+        <li><a href="javascript:void(0)" onclick="changeLanguage('vi')"><img src="https://flagcdn.com/w20/vn.png" class="flag-img"> Vietnamese</a></li>
     </ul>
+</div>
 </div>
 <div id="google_translate_element" style="display:none;"></div>
 
